@@ -1,0 +1,49 @@
+/*	mixins
+---------------------------------------------------------------------------------- */
+
+// @include opacity(0.8);
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// @include s-only{ }
+@mixin s-only {
+  @media only screen {
+    @content;
+  }
+}
+@mixin s-up {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+@mixin m-only {
+  @media only screen and (min-width: 40.063em) {
+    @content;
+  }
+}
+@mixin m-up {
+  @media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    @content;
+  }
+}
+@mixin l-only {
+  @media only screen and (min-width: 64.063em) {
+    @content;
+  }
+}
+@mixin l-up {
+  @media only screen and (min-width: 64.063em) and (max-width: 90em) {
+    @content;
+  }
+}
+
+// @include vertical-align();
+// for parent item - transform-style: preserve-3d;
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}

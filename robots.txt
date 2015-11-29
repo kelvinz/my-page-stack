@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /.codekit-cache/
+Sitemap: http://www.mysite.com/pages/sitemap.xml

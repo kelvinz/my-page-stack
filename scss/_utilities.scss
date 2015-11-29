@@ -1,0 +1,37 @@
+/*	utilities
+---------------------------------------------------------------------------------- */
+
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table; }
+
+.clearfix:after {
+	clear: both; }
+
+.antialiased {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
+
+.left {
+	float: left !important; }
+
+.right {
+	float: right !important; }
+
+.hide {
+	display: none; }
+
+.invisible {
+	visibility: hidden; }
+
+.text-left {
+	text-align: left !important; }
+
+.text-right {
+	text-align: right !important; }
+
+.text-center {
+	text-align: center !important; }
+
+.text-justify {
+	text-align: justify !important; }

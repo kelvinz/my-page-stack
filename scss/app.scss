@@ -1,0 +1,214 @@
+/*
+	(╯°□°)╯︵ ┻━┻ ¯\_(ツ)_/¯
+	@kelvin___
+*/
+
+@import '../css/normalize';
+@import 'defaults';
+@import 'grids';
+@import 'mixins';
+@import 'utilities';
+@import 'variables';
+
+/*	app.scss starts here
+---------------------------------------------------------------------------------- */
+
+$my-opacity: 0.5;
+
+#toggle {
+
+	#patty {
+		top: 2em;
+		right: 2em;
+		width: 34px;
+		height: 32px;
+		z-index: 100;
+		position: fixed;
+
+		#top, #middle, #bottom {
+			width: 24px;
+		    height: 4px;
+		    margin: 5px 5px;
+		    background-color: white; }
+
+		&:hover {
+			cursor: pointer;
+			opacity: $my-opacity; }
+	}
+
+	#hidden-nav {
+		width: 100%;
+		height: 100%;
+		z-index: 100;
+		position: fixed;
+		visibility: hidden;
+		background-color: rgba( 0, 0, 0, 0.7 );
+
+		ul {
+			margin: 0;
+			padding: 0;
+			@include vertical-align();
+
+			li {
+				cursor: pointer;
+				color: white;
+				font-size: 5em;
+				@include s-up { font-size: 3em; }
+				list-style: none;
+
+				&:hover,
+				&.active {
+					color: black;
+					background-color: white; }
+
+				&.active { cursor: default; }
+			}
+		}
+	}
+}
+
+#logo {
+	top: 2em;
+	left: 2em;
+	z-index: 100;
+	position: fixed;
+
+	a {
+		color: white;
+		text-decoration: none;
+		&:hover { @include opacity( $my-opacity ); }
+	}
+}
+
+#top-nav {
+	top: 2em;
+	right: 2em;
+	z-index: 99;
+	position: fixed;
+
+	a {
+		margin-right: 2em;
+		border-radius: 10px;
+		text-decoration: none;
+		padding: 7px 21px 7px 21px;
+		color: rgba(255, 255, 255, $my-opacity);
+		border: 3px solid rgba(255, 255, 255, $my-opacity);
+
+		&:hover {
+			color: white;
+			border: 3px solid white; }
+	}
+
+	.active {
+		color: black;
+		cursor: default;
+		background: white;
+		pointer-events: none; }
+}
+
+#dot-nav {
+	@include vertical-align();
+	z-index: 99;
+	right: 1.5em;
+	position: fixed;
+
+	.dot {
+		width: 1em;
+		height: 1em;
+		cursor: pointer;
+		border-radius: 50%;
+		margin-bottom: 0.7em;
+		border: 3px solid rgba(255, 255, 255, $my-opacity);
+
+		&:hover {
+			border: 3px solid rgb(255, 255, 255); }
+	}
+
+	.active {
+		cursor: default;
+		pointer-events: none;
+		background: rgb(255, 255, 255); }
+}
+
+
+#left-footer {
+	left: 2em;
+	z-index: 99;
+	bottom: 1.25em;
+	position: fixed;
+
+	a {
+		color: white;
+		text-decoration: none;
+		&:hover { @include opacity( $my-opacity ); }
+	}
+}
+
+#right-footer {
+	right: 2em;
+	z-index: 99;
+	bottom: 1.25em;
+	position: fixed;
+
+	a {
+		color: white;
+		padding-left: 1.5em;
+		text-decoration: none;
+		&:hover { @include opacity( $my-opacity ); }
+	}
+}
+
+.next {
+	left: 49.5%;
+	bottom: 12px;
+	cursor: pointer;
+	position: absolute;
+
+	@include s-up { left: 48%; }
+	&:hover { @include opacity( $my-opacity ); }
+}
+
+.top {
+	padding: 20px;
+	background-color: #56BC8A;
+
+	@include s-up { font-weight: bold; }
+
+	a {
+		color: white;
+		&:hover { @include opacity( $my-opacity ); }
+	}
+}
+
+#my-page-stack {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+
+	.section {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		position: relative; }
+
+	.scroll {
+		overflow: auto; }
+}
+
+// for demo purposes
+.section:nth-child(1) { background-color: #56BC8A; }
+.section:nth-child(2) { background-color: #A77DC2; }
+.section:nth-child(3) { background-color: #36465D; }
+.section:nth-child(4) { background-color: #F2992E; }
+
+.card {
+	width: 100%;
+	height: 290px;
+	margin-top: 100px;
+	border-radius: 5px;
+	background-color: white; }
+
+.last { margin-bottom: 30px; }

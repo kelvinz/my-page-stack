@@ -1,0 +1,31 @@
+/*	defaults
+---------------------------------------------------------------------------------- */
+
+html, body {
+	height: 100%;
+	font-size: 100%;
+	overflow: auto; }
+
+html {
+	box-sizing: border-box; }
+
+*, *:before, *:after {
+	text-rendering: optimizeLegibility;
+	box-sizing: inherit; }
+
+body {
+	cursor: auto;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1.5;
+	position: relative; }
+
+a:hover {
+	cursor: pointer; }
+
+img {
+	max-width: 100%;
+	height: auto;
+	-ms-interpolation-mode: bicubic;
+	display: inline-block;
+	vertical-align: middle; }
